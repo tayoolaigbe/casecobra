@@ -9,7 +9,7 @@ import { Configuration } from '@prisma/client';
 import { useMutation } from '@tanstack/react-query';
 import { ArrowRight, Check } from 'lucide-react';
 import { useEffect, useState } from 'react';
-// import Confetti from 'react-dom-confetti';
+import Confetti from 'react-dom-confetti';
 import { createCheckoutSession } from './actions';
 import { useRouter } from 'next/navigation';
 import { useToast } from '@/components/ui/use-toast';
@@ -72,10 +72,10 @@ const DesignPreview = ({ configuration }: { configuration: Configuration }) => {
 				aria-hidden="true"
 				className="pointer-events-none select-none absolute inset-0 overflow-hidden flex justify-center"
 			>
-				{/* <Confetti
+				<Confetti
 					active={showConfetti}
 					config={{ elementCount: 200, spread: 90 }}
-				/> */}
+				/>
 			</div>
 
 			{/* <LoginModal isOpen={isLoginModalOpen} setIsOpen={setIsLoginModalOpen} /> */}
